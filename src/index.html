@@ -1,14 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/@coreui/coreui@4.2.0/dist/css/coreui.min.css" rel="stylesheet" integrity="sha384-UkVD+zxJKGsZP3s/JuRzapi4dQrDDuEf/kHphzg8P3v8wuQ6m9RLjTkPGeFcglQU" crossorigin="anonymous">
+    <title>CoreUi_Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/@coreui/coreui@4.2.0/dist/css/coreui.min.css" rel="stylesheet"
+        integrity="sha384-UkVD+zxJKGsZP3s/JuRzapi4dQrDDuEf/kHphzg8P3v8wuQ6m9RLjTkPGeFcglQU" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
 </head>
-<body>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui@4.2.0/dist/js/coreui.bundle.min.js" integrity="sha384-n0qOYeB4ohUPebL1M9qb/hfYkTp4lvnZM6U6phkRofqsMzK29IdkBJPegsyfj/r4" crossorigin="anonymous"></script>
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .legend-div {
+        position: absolute;
+        top: 62px;
+        left: 320px;
+    }
+
+    .legend-div ul li {
+        margin: 30px 0 0 300px;
+        color: #666;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    }
+
+    .legend-div ul li span {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+</style>
+
+<body class="h-100">
+    <div class="sidebar sidebar-show h-100 d-inline-block">
+        <ul class="sidebar-nav">
+            <li class="nav-title">Web</li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="nav-icon cil-speedometer"></i> Nav item
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="nav-icon cil-speedometer"></i> With badge
+                    <span class="badge bg-primary">NEW</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="nav-icon cil-speedometer"></i> Chart
+                </a>
+            </li>
+            <li class="nav-item nav-group">
+                <a class="nav-link nav-group-toggle" href="#">
+                    <i class="nav-icon cil-puzzle"></i> Nav dropdown
+                </a>
+                <ul class="nav-group-items">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="nav-icon cil-puzzle"></i> Nav dropdown item
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="nav-icon cil-puzzle"></i> Nav dropdown item
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item mt-auto">
+                <a class="nav-link nav-link-success" href="https://coreui.io">
+                    <i class="nav-icon cil-cloud-download"></i> Download CoreUI</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-link-danger" href="https://coreui.io/pro/">
+                    <i class="nav-icon cil-layers"></i> Try CoreUI
+                    <strong>PRO</strong>
+                </a>
+            </li>
+        </ul>
+        <button class="sidebar-toggler" type="button"></button>
+    </div>
+    <div class="d-inline-block ail">
+        가나다
+    </div>
+    <div class="chart-div d-inline-block">
+        <canvas id="pieChartCanvas" width="300px" height="300px"></canvas>
+        <div id='legend-div' class="legend-div"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui@4.2.0/dist/js/coreui.bundle.min.js"
+        integrity="sha384-n0qOYeB4ohUPebL1M9qb/hfYkTp4lvnZM6U6phkRofqsMzK29IdkBJPegsyfj/r4"
+        crossorigin="anonymous"></script>
+    <script src="pychart.js"></script>
 </body>
+
 </html>
